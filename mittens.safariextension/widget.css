@@ -1,0 +1,78 @@
+#occupy-widget { position: fixed; bottom: 0px; left: 0px; z-index: 200; font-family: sans-serif; }
+#occupy-customize { font-family: sans-serif; }
+
+.occupy-widget .avatar { float: left; padding: 2px; margin: 0 10px 10px 0; text-align: center; font-family: Impact, sans-serif; font-size: 16pt; font-weight: normal; }
+
+.occupy-widget .avatar, .occupy-widget .avatar a, .occupy-widget .avatar img {
+  /*width: 250px;*/
+  height: 230px;
+}
+.occupy-widget .avatar a, .occupy-widget .bigavatar a { display: block; border: 5px solid transparent; }
+.occupy-widget .avatar a:hover, .occupy-widget .bigavatar a:hover { border-color: #f0f; }
+.occupy-widget .avatar a.selected, .occupy-widget .bigavatar a.selected { border-color: #ff0; }
+#occupy-customize .bigavatar img { max-height: 300px; }
+#occupy-customize .bigavatar span { position: relative; top: -160px; right: 50px; background-color: #fff; color: #333; padding: 6px 10px; border: 1px solid #666; }
+
+#occupy-customize #introduction { float: left; width: 350px; margin-top: 30px; padding-right: 25px; }
+#occupy-customize #introduction strong { font-size: 15pt; color: #f0f; padding: 0 20px; }
+#occupy-customize #signage { }
+#occupy-customize #signage { float: left; width: 300px; height: 120px; margin-top: 50px; }
+#occupy-customize #signage input { font-size: 15pt; padding: 10px; }
+
+#occupy-customize #avatars { background: #fef; clear: both; }
+
+#occupy-customize #embed_code { margin-bottom: 20px; font-size: 8pt; width: 300px; background-color: #dedede; padding: 5px 1px 0; }
+
+.occupy-widget #occupy-uuid { display: none; }
+.occupy-widget #occupy-customize {  }
+.occupy-widget #occupy-you { position: absolute; z-index: 5; color: #ccc; background: #f0f; opacity: 0.7; font-family: sans-serif; padding-top: 5px; margin-top: -80px; width: 180px; text-align: center; }
+.occupy-widget #occupy-you a { color: #fff; font-weight: bold; font-size: 10pt; display: block; padding: 5px 8px; border: 0; height: 20px; }
+.occupy-widget #occupy-site { float: left; display: inline; }
+
+#occupy-avatars { position: absolute; bottom: -10px; left: 25px; }
+#occupy-protestor_avatars { margin-top: 50px; }
+#occupy-protestor_count { float: left; color: #ccc; margin-left: 10px; }
+
+/* Fix any stray a bg styles, like on fffff.at */
+.occupy-widget a, .occupy-widget a:link, .occupy-widget a:visited { background-color: transparent; border-color: transparent; }
+
+#occupy-joinprotest {
+  position: absolute;
+  z-index: 300;
+  bottom: 20px;
+  left: 15px;
+  text-align: center;
+  padding-right: 10px;
+}
+#occupy-joinprotest a { font-size: 8pt; }
+#occupy-joinprotest a#occupy-joinprotest-header {
+  background-color: #f0f;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+#occupy-joinprotest a#occupy-joinprotest-header:hover { color: #ff0; }
+
+#occupy-joinprotest a#occupy-joinprotest-button {
+  font-style: italic;
+  background-color: #000;
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  padding: 21px 20px;
+  text-decoration: none;
+  font-size: 15pt;
+}
+#occupy-joinprotest a#occupy-joinprotest-button:hover { background-color: #ff0; color: #000; }
+
+#occupy-customize {
+/*  position: absolute;*/
+  z-index: 10;
+/*  width: 600px;*/
+/*  margin-top: 0px; margin-left: 80px; padding: 10px 20px;*/
+
+/*  background-color: #f9f9f9;
+  border: 1px solid #dfdfdf;
+*/}
+
