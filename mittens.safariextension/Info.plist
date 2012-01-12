@@ -27,12 +27,18 @@
 		<dict>
 			<key>End</key>
 			<array>
-				<string>mittens.js</string>
+				<string>mittens3.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>jquery-latest.js</string>
 			</array>
 		</dict>
 		<key>Stylesheets</key>
 		<array/>
 	</dict>
+	<key>Description</key>
+	<string>Meeooow</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -44,6 +50,6 @@
 		</dict>
 	</dict>
 	<key>Website</key>
-	<string>http://fffff.at/</string>
+	<string>http://fffff.at/mittens-romney-extension</string>
 </dict>
 </plist>
