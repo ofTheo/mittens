@@ -1,0 +1,32 @@
+<!--
+
+  Mittens Romney
+  Meeeooow
+
+  by Theo Watson <http://www.theowatson.com>
+
+  MIT License - http://creativecommons.org/licenses/MIT
+
+  ####################################################################################
+
+-->
+<html><head>
+<script>
+
+function selectedTab(tab) {
+  var detailsObj = new Object();
+  detailsObj.file = "mittens3.js";
+  chrome.tabs.executeScript(tab.id, detailsObj, function(){});
+}
+
+function onUpdatedTab(tabid, objectinfo, tab) {
+  var targettab = tab;
+  setTimeout(function() { selectedTab(tab);}, 1000); 
+}
+
+function pageOnClicked(tab) {}
+
+chrome.tabs.onUpdated.addListener(onUpdatedTab);
+
+</script>
+</head><body></body></html>
