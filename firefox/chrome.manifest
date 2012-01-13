@@ -1,0 +1,2 @@
+content				mittens-romney													content/																		contentaccessible=yes
+overlay				chrome://browser/content/browser.xul		chrome://mittens-romney/content/overlay.xul

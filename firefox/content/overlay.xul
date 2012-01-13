@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<overlay xmlns='http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'>
+
+<script type="text/javascript">
+
+var mittens = {
+
+  init : function() {
+    gBrowser.tabContainer.addEventListener("TabAttrModified", this.onPageLoad, false);
+  },
+
+  // Run on pageload
+  onPageLoad : function(e) {
+    var tab = gBrowser.getBrowserForTab(e.target);
+    if (!tab || !tab.currentURI || !tab.currentURI.spec.match(/^http(s)?/i)) return false;
+
+    try {
+      var doc = tab.contentDocument,
+          d = Components.stack.filename.replace(/.* -> |[^\/]+$/g, ""),
+          t = doc.createElement('script');
+      t.type = 'text/javascript';
+      t.src = d+'mittens.js';
+      doc.head.appendChild(t);
+
+    } catch(err) {}
+  }
+
+};
+
+mittens.init();
+
+</script>
+
+</overlay>
