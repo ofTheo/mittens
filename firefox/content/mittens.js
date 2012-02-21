@@ -11,9 +11,7 @@ function traverseSubtree(base) {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
-	traverseSubtree(document);
-}, false);
+traverseSubtree(document);
 
 document.body.addEventListener('DOMNodeInserted', function(event) {
 	traverseSubtree(event.target);
