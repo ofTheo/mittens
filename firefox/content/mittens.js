@@ -26,7 +26,11 @@ document.body.addEventListener('DOMCharacterDataModified', function(event) {
 }, false);
 
 if (location.href.match(regexURL)) {
-	history.replaceState(null, '', location.pathname.replace(regexURL, replacementURL) + location.hash.replace(regexURL, replacementURL));
+	var originalURL = location.pathname + location.hash;
+	history.replaceState(null, '', originalURL.replace(regexURL, replacementURL));
+	window.addEventListener('beforeunload', function(event) {
+		history.replaceState(null, '', originalURL);
+	}, false);
 }
 
 })();
