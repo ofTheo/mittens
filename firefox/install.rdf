@@ -4,7 +4,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>mittens@muonics.net</em:id>
     <em:name>Mittens Romney</em:name>
-    <em:version>1.0.1</em:version>
+    <em:version>1.0.2</em:version>
 
     <em:creator>Theo Watson</em:creator>
     <em:description>Meooow</em:description>

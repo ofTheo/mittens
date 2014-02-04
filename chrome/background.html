@@ -21,7 +21,7 @@ function selectedTab(tab) {
 
 function onUpdatedTab(tabid, objectinfo, tab) {
   var targettab = tab;
-  setTimeout(function() { selectedTab(tab);}, 1000); 
+  selectedTab(tab);
 }
 
 function pageOnClicked(tab) {}

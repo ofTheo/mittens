@@ -6,17 +6,16 @@
 var mittens = {
 
   init : function() {
-    gBrowser.tabContainer.addEventListener("TabAttrModified", this.onPageLoad, false);
+    gBrowser.addEventListener("DOMContentLoaded", this.onPageLoad, false);
   },
 
   // Run on pageload
   onPageLoad : function(e) {
-    var tab = gBrowser.getBrowserForTab(e.target);
-    if (!tab || !tab.currentURI || !tab.currentURI.spec.match(/^http(s)?/i)) return false;
+    var doc = e.originalTarget, win = doc.defaultView;
+    if (doc.nodeName != "#document" || !doc.location.href.match(/^http(s)?/i)) return false;
 
     try {
-      var doc = tab.contentDocument,
-          d = Components.stack.filename.replace(/.* -> |[^\/]+$/g, ""),
+      var d = Components.stack.filename.replace(/.* -> |[^\/]+$/g, ""),
           t = doc.createElement('script');
       t.type = 'text/javascript';
       t.src = d+'mittens.js';
